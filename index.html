@@ -1,0 +1,63 @@
+<!--
+    Written by: Saleh Ibne Omar
+    Date created: 18-Feb-2019
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modern Digital Clock</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bg">
+
+    <div id="wholecontent">
+        <div class="card">
+            <div class="card-header">
+             <h2 id="msg"></h2>
+            </div>
+            <div class="card-body">
+                <div class="content">
+                    <div class="clock">
+                        <p id="digitalclock"></p>
+                        <span id="ampm"></span>
+                    </div>
+                    <div class="date">
+                        <p id="fulldate"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <center>
+                    <button id="devinfo">Dev's info</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+        <div id="loadingscreen">
+            <div class="progress" id="bar">
+                <div class="loader" id="barloader"></div>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function preLoader(){
+            setTimeout(function(){
+            document.getElementById("loadingscreen").style.display = "none";
+            document.getElementById("wholecontent").style.display = "block";
+            }, 10000);
+        }
+        window.addEventListener("load", preLoader); 
+    </script>
+</body>
+</html>
